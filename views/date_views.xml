@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <act_window id="action_date"
+                name="Date Converter"
+                res_model="date"/>
+
+
+    <menuitem id="menu_date"
+              name="Date converter"
+              action="action_date" />
+
+
+    <record id="view_form_date" model="ir.ui.view">
+    <field name="name">Date Converter</field>
+    <field name="model">date</field>
+    <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <h4>AD to BS Converter</h4>
+                    <group name="group-top">
+                        <group name="group-left">
+                            <field name="english_date"/>
+                        </group>
+                        <group name="group-right">
+                            <field name="nep_date" type="Char"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+    </field>
+    </record>
+
+    <record id="view_tree_date" model="ir.ui.view">
+        <field name="name">Date tree</field>
+        <field name="model">date</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="english_date"/>
+                <field name="nep_date"/>
+            </tree>
+        </field>
+
+    </record>
+</odoo>
